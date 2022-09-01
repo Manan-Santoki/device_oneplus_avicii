@@ -25,8 +25,11 @@
 # Google Camera
 $(call inherit-product-if-exists, packages/apps/GoogleCamera/config.mk)
 
-# Inherit Oneplus Camera
-$(call inherit-product, vendor/oneplus/avicii-camera/config.mk)
+# OnePlus Camera
+$(call inherit-product-if-exists, vendor/oneplus/apps/avicii/config.mk)
+
+# Blur
+TARGET_ENABLE_BLUR := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
